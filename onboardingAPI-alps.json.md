@@ -1,13 +1,13 @@
-# onboardingAPI.wsd
+# On-Boarding API
 
 
-ALPS document for onboardingAPI.wsd
+ALPS Profile for BigCo's Customer On-Boarding API
 
 ## Properties
 
 
- - identifier
- - name
- - email
- - region
- - discount
+ - identifier : Unique onboarding record identifier.
+ - name : Name of the customer being onboarded.
+ - email : Email address of the customer being onboarded.
+ - region : Sales region where the customer is located.
+ - discount : Discount (as a percentage) this customer is granted.

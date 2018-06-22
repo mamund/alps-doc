@@ -1,31 +1,36 @@
 {
   "alps": {
     "version": "1.0",
-    "title": "onboardingAPI.wsd",
+    "title": "On-Boarding API",
     "doc": {
       "type": "text",
-      "value": "ALPS document for onboardingAPI.wsd"
+      "value": "ALPS Profile for BigCo's Customer On-Boarding API"
     },
     "descriptors": [
       {
         "id": "identifier",
-        "type": "semantic"
+        "type": "semantic",
+        "text" : "Unique onboarding record identifier."
       },
       {
         "id": "name",
-        "type": "semantic"
+        "type": "semantic",
+        "text" : "Name of the customer being onboarded."
       },
       {
         "id": "email",
-        "type": "semantic"
+        "type": "semantic",
+        "text" : "Email address of the customer being onboarded."
       },
       {
         "id": "region",
-        "type": "semantic"
+        "type": "semantic",
+        "text" : "Sales region where the customer is located."
       },
       {
         "id": "discount",
-        "type": "semantic"
+        "type": "semantic",
+        "text" : "Discount (as a percentage) this customer is granted."
       },
       {
         "id": "home",
