@@ -26,6 +26,7 @@ function alps2doc(file) {
   if(readALPS(docs)===true) {
     console.log("parsing ALPS into Markdown...");
     parseTitle(docs);
+    parseOpening(docs);
     writeMD(docs);
   }
 }
@@ -53,9 +54,10 @@ function readALPS(docs) {
 
 function parseTitle(docs) {
   var title;
+  var node = docs.alps.alps;
   
-  if(docs.alps.alps.title && docs.alps.alps.title!=="") {
-    title = docs.alps.alps.title;
+  if(node.title && node.title!=="") {
+    title = node.title;
   }
   else {
     title = docs.infile;
@@ -63,4 +65,20 @@ function parseTitle(docs) {
   docs.doc.push({h1:title});
 
   return true;  
+}
+
+function parseOpening(docs) {
+  var opening;
+  var node = docs.alps.alps;
+
+  if(node.doc) {
+    if(node.doc.value) {
+      docs.doc.push({p:node.doc.value});
+    }
+    else {
+      docs.doc.push({p:""});
+    }
+  }
+
+  return true;
 }
