@@ -88,7 +88,6 @@ function parseOpening(docs) {
       docs.doc.push({p:""});
     }
   }
-
   return true;
 }
 
