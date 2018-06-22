@@ -33,38 +33,14 @@ The following actions, or state transitions, are defined for this API.
 id | type | rt | args | notes
 --- | --- | --- | --- | ---
 **startOnboarding**
-safe
-(rt)
-(args)
-(notes) | **collectCustomerData**
-safe
-(rt)
-(args)
-(notes) | **saveToWIP**
+safe | **collectCustomerData**
+safe | **saveToWIP**
+unsafe | **collectAccountData**
+safe | **saveToWIP**
+unsafe | **completeOnboarding**
+unsafe | **goHome**
+safe | **abandonOnboarding**
 unsafe
-(rt)
-(args)
-(notes) | **collectAccountData**
-safe
-(rt)
-(args)
-(notes) | **saveToWIP**
-unsafe
-(rt)
-(args)
-(notes) | **completeOnboarding**
-unsafe
-(rt)
-(args)
-(notes) | **goHome**
-safe
-(rt)
-(args)
-(notes) | **abandonOnboarding**
-unsafe
-(rt)
-(args)
-(notes)
 
 ## States
 
