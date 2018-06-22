@@ -122,8 +122,18 @@ function parseProperties(docs) {
 }
 
 function parseActions(docs) {
-  docs.doc.push({h2:"Actions"});
-  docs.doc.push({p:"The following actions, or state transitions, are defined for this API."});
+  var actions = [];
+  var a = [];
+  var node = docs.doc;
+  var i,x;
+  var text;
+
+  node.push({h2:"Actions"});
+  node.push({p:"The following actions, or state transitions, are defined for this API."});
+
+  actions = JSONPath({json:docs.alps,path:"$..descriptors[?(@.type==='safe' || @.type==='unsafe' || @.type==='idempotent')]"});
+  console.log(actions);
+ 
   docs.doc.push({p:"TK"});
 
   return true;
