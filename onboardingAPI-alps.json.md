@@ -36,35 +36,35 @@ id | type | rt | args | notes
 safe
 (rt)
 (args)
-notes) | **collectCustomerData**
+(notes) | **collectCustomerData**
 safe
 (rt)
 (args)
-notes) | **saveToWIP**
+(notes) | **saveToWIP**
 unsafe
 (rt)
 (args)
-notes) | **collectAccountData**
+(notes) | **collectAccountData**
 safe
 (rt)
 (args)
-notes) | **saveToWIP**
+(notes) | **saveToWIP**
 unsafe
 (rt)
 (args)
-notes) | **completeOnboarding**
+(notes) | **completeOnboarding**
 unsafe
 (rt)
 (args)
-notes) | **goHome**
+(notes) | **goHome**
 safe
 (rt)
 (args)
-notes) | **abandonOnboarding**
+(notes) | **abandonOnboarding**
 unsafe
 (rt)
 (args)
-notes)
+(notes)
 
 ## States
 
