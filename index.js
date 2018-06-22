@@ -3,6 +3,11 @@
 /* 
  * alps2doc  utility
  * converts valid ALPS file into basic reference documentation
+ *
+ * relies on the following:
+ * - https://www.npmjs.com/package/json2md
+ * - https://www.npmjs.com/package/jsonpath-plus
+ *
  * 2018-06
  * mamund
  */
