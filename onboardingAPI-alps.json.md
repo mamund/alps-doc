@@ -6,6 +6,9 @@ ALPS Profile for BigCo's Customer On-Boarding API
 ## Properties
 
 
+The following data properties are defined for this API.
+
+
  - **identifier** : Unique onboarding record identifier.
  - **name** : Name of the customer being onboarded.
  - **email** : Email address of the customer being onboarded.
@@ -15,9 +18,15 @@ ALPS Profile for BigCo's Customer On-Boarding API
 ## Actions
 
 
+The following actions, or state transitions, are defined for this API.
+
+
 TK
 
 ## States
+
+
+The following states (e.g. REST Resources) are defined for this API.
 
 
 TK
