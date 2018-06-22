@@ -121,12 +121,26 @@ function parseProperties(docs) {
   return true;
 }
 
+/* emit action table
+  { 
+    table : {
+      headers: [],
+      rows : [
+        []
+      ]
+    }
+  }
+ 
+*/
 function parseActions(docs) {
   var actions = [];
   var a = [];
   var node = docs.doc;
-  var i,x;
-  var text;
+  var i,x,text;
+  var line;
+  var headers = ["id","type","rt","args","notes"];
+  var rows = [];
+  var table = {}
 
   actions = JSONPath({json:docs.alps,path:"$..descriptors[?(@.type==='safe' || @.type==='unsafe' || @.type==='idempotent')]"});
 
