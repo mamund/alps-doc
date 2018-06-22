@@ -32,7 +32,9 @@ function alps2doc(file) {
     console.log("parsing ALPS into Markdown...");
     parseTitle(docs);
     parseOpening(docs);
-    parseProperties(docs); 
+    parseProperties(docs);
+    parseActions(docs);
+    parseStates(docs); 
     writeMD(docs);
   }
 }
@@ -116,4 +118,19 @@ function parseProperties(docs) {
     node.push({ul:p});
   }
   return true;
+}
+
+function parseActions(docs) {
+  docs.doc.push({h2:"Actions"});
+  docs.doc.push({p:"TK"});
+
+  return true;
+}
+
+function parseStates(docs) {
+  docs.doc.push({h2:"States"});
+  docs.doc.push({p:"TK"});
+
+  return true;
+
 }

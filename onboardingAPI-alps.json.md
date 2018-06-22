@@ -11,3 +11,13 @@ ALPS Profile for BigCo's Customer On-Boarding API
  - **email** : Email address of the customer being onboarded.
  - **region** : Sales region where the customer is located.
  - **discount** : Discount (as a percentage) this customer is granted.
+
+## Actions
+
+
+TK
+
+## States
+
+
+TK
