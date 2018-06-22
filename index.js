@@ -11,6 +11,7 @@
 
 var program = require('commander');
 var fs = require('fs');
+var docs = {infile:"",outfile:"",alps:{},doc:{}};
 
 // top-level routine
 program
@@ -20,5 +21,25 @@ program
 
 // do the work
 function alps2doc(file) {
-  console.log(file);
+  docs.infile = file;
+  if(readALPS(docs)===true) {
+    console.log(docs.alps);
+  }
 }
+
+// read the alps 
+function readALPS(docs) {
+  var rtn = "";
+
+  if(fs.existsSync(docs.infile)) {
+    docs.alps = JSON.parse(fs.readFileSync(docs.infile,'utf8'));
+    rtn = true;
+  } 
+  else {
+    console.log("File not found or invalid: "+docs.infile);
+    rtn = false;
+  }  
+
+  return rtn;
+}
+
