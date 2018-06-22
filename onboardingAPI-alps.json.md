@@ -33,30 +33,38 @@ The following actions, or state transitions, are defined for this API.
 id | type | rt | args | notes
 --- | --- | --- | --- | ---
 **startOnboarding**
-
-
- | **collectCustomerData**
-
-
- | **saveToWIP**
-
-
- | **collectAccountData**
-
-
- | **saveToWIP**
-
-
- | **completeOnboarding**
-
-
- | **goHome**
-
-
- | **abandonOnboarding**
-
-
-
+.
+.
+.
+. | **collectCustomerData**
+.
+.
+.
+. | **saveToWIP**
+.
+.
+.
+. | **collectAccountData**
+.
+.
+.
+. | **saveToWIP**
+.
+.
+.
+. | **completeOnboarding**
+.
+.
+.
+. | **goHome**
+.
+.
+.
+. | **abandonOnboarding**
+.
+.
+.
+.
 
 ## States
 
