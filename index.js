@@ -108,6 +108,7 @@ function parseProperties(docs) {
   props = JSONPath({json:docs.alps,path:"$..descriptors[?(@.type==='semantic')]"});
   if(props.length!==0) {
     node.push({h2:"Properties"});
+    node.push({p:"The following data properties are defined for this API."});
     for(i=0,x=props.length;i<x;i++) {
       text = "**" + props[i].id + "**";
       if(props[i].text && props[i].text !== "") {
@@ -122,6 +123,7 @@ function parseProperties(docs) {
 
 function parseActions(docs) {
   docs.doc.push({h2:"Actions"});
+  docs.doc.push({p:"The following actions, or state transitions, are defined for this API."});
   docs.doc.push({p:"TK"});
 
   return true;
@@ -129,6 +131,7 @@ function parseActions(docs) {
 
 function parseStates(docs) {
   docs.doc.push({h2:"States"});
+  docs.doc.push({p:"The following states (e.g. REST Resources) are defined for this API."});
   docs.doc.push({p:"TK"});
 
   return true;
