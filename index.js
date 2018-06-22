@@ -102,13 +102,12 @@ function parseProperties(docs) {
   if(props.length!==0) {
     node.push({h2:"Properties"});
     for(i=0,x=props.length;i<x;i++) {
-      text = "*"+props[i].id+"*";
+      text = "**" + props[i].id + "**";
       if(props[i].text && props[i].text !== "") {
         text = text + " : " + props[i].text;
       }
       p.push(text);
     }
-    console.log(JSON.stringify(p,null,2));
     node.push({ul:p});
   }
   return true;
