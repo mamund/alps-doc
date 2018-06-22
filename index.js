@@ -9,6 +9,7 @@
 
 "use strict";
 
+var json2md = require('json2md');
 var program = require('commander');
 var fs = require('fs');
 var docs = {infile:"",outfile:"",alps:{},doc:[]};
@@ -25,8 +26,13 @@ function alps2doc(file) {
   if(readALPS(docs)===true) {
     console.log("parsing ALPS into Markdown...");
     parseTitle(docs);
+    writeMD(docs);
   }
-  console.log(JSON.stringify(docs.doc,null,2));
+}
+
+// write out the markdown
+function writeMD(docs) {
+  console.log(json2md(docs.doc));
 }
 
 // read the alps 
