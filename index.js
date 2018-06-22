@@ -153,6 +153,7 @@ function parseActions(docs) {
     }
     node.push({ul:a});
   }
+  node.push({table:{headers:headers,rows:[rows]}});
 
   return true;
 }

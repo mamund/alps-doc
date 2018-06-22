@@ -30,6 +30,10 @@ The following actions, or state transitions, are defined for this API.
  - **goHome**
  - **abandonOnboarding**
 
+id | type | rt | args | notes
+--- | --- | --- | --- | ---
+
+
 ## States
 
 
