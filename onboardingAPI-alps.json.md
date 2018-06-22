@@ -21,7 +21,14 @@ The following data properties are defined for this API.
 The following actions, or state transitions, are defined for this API.
 
 
-TK
+ - **startOnboarding**
+ - **collectCustomerData**
+ - **saveToWIP**
+ - **collectAccountData**
+ - **saveToWIP**
+ - **completeOnboarding**
+ - **goHome**
+ - **abandonOnboarding**
 
 ## States
 

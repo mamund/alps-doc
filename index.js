@@ -128,13 +128,17 @@ function parseActions(docs) {
   var i,x;
   var text;
 
-  node.push({h2:"Actions"});
-  node.push({p:"The following actions, or state transitions, are defined for this API."});
-
   actions = JSONPath({json:docs.alps,path:"$..descriptors[?(@.type==='safe' || @.type==='unsafe' || @.type==='idempotent')]"});
-  console.log(actions);
- 
-  docs.doc.push({p:"TK"});
+
+  if(actions.length!==0) {
+    node.push({h2:"Actions"});
+    node.push({p:"The following actions, or state transitions, are defined for this API."});
+    for(i=0,x=actions.length;i<x;i++) {
+      text = "**" + actions[i].id + "**";
+      a.push(text);
+    }
+    node.push({ul:a});
+  }
 
   return true;
 }
