@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Read in ALPS profile, generate basic reference documentation",
   "main": "index.js",
+  "bin" : {
+    "alps2doc" : "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
