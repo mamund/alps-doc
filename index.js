@@ -150,6 +150,7 @@ function parseActions(docs) {
     for(i=0,x=actions.length;i<x;i++) {
       text = "**" + actions[i].id + "**";
       a.push(text);
+      rows.push([text,"","",""]);
     }
     node.push({ul:a});
   }
