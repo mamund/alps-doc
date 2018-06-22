@@ -11,7 +11,7 @@
 
 var program = require('commander');
 var fs = require('fs');
-var docs = {infile:"",outfile:"",alps:{},doc:{}};
+var docs = {infile:"",outfile:"",alps:{},doc:[]};
 
 // top-level routine
 program
@@ -23,8 +23,10 @@ program
 function alps2doc(file) {
   docs.infile = file;
   if(readALPS(docs)===true) {
-    console.log(docs.alps);
+    console.log("parsing ALPS into Markdown...");
+    parseTitle(docs);
   }
+  console.log(JSON.stringify(docs.doc,null,2));
 }
 
 // read the alps 
@@ -43,3 +45,16 @@ function readALPS(docs) {
   return rtn;
 }
 
+function parseTitle(docs) {
+  var title;
+  
+  if(docs.alps.alps.title && docs.alps.alps.title!=="") {
+    title = docs.alps.alps.title;
+  }
+  else {
+    title = docs.infile;
+  }
+  docs.doc.push({h1:title});
+
+  return true;  
+}
