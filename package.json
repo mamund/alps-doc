@@ -29,6 +29,7 @@
   "homepage": "https://github.com/mamund/alps-doc#readme",
   "dependencies": {
     "commander": "^2.15.1",
-    "json2md": "^1.6.1"
+    "json2md": "^1.6.1",
+    "jsonpath-plus": "^0.16.0"
   }
 }

@@ -8,9 +8,9 @@
  */
 
 "use strict";
-
 var json2md = require('json2md');
 var program = require('commander');
+var JSONPath = require('jsonpath-plus');
 var fs = require('fs');
 var docs = {infile:"",outfile:"",alps:{},doc:[]};
 
@@ -27,6 +27,7 @@ function alps2doc(file) {
     console.log("parsing ALPS into Markdown...");
     parseTitle(docs);
     parseOpening(docs);
+    parseProperties(docs); 
     writeMD(docs);
   }
 }
@@ -88,5 +89,23 @@ function parseOpening(docs) {
     }
   }
 
+  return true;
+}
+
+function parseProperties(docs) {
+  var props = [];
+  var p = [];
+  var node = docs.doc;
+  var i,x;
+
+  props = JSONPath({json:docs.alps,path:"$..descriptors[?(@.type==='semantic')]"});
+  if(props.length!==0) {
+    node.push({h2:"Properties"});
+    for(i=0,x=props.length;i<x;i++) {
+      p.push(props[i].id);
+    }
+    console.log(JSON.stringify(p,null,2));
+    node.push({ul:p});
+  }
   return true;
 }
