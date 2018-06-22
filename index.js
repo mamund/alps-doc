@@ -33,8 +33,16 @@ function alps2doc(file) {
 
 // write out the markdown
 function writeMD(docs) {
-  console.log(json2md(docs.doc));
-}
+  docs.outfile = docs.infile + ".md";
+  fs.writeFile(docs.outfile,json2md(docs.doc), function(err) {
+    if(err) {
+      console.log(err);
+    }
+    else {
+      console.log(docs.outfile + " written.");
+    }
+  });
+} 
 
 // read the alps 
 function readALPS(docs) {
