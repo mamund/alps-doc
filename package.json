@@ -1,0 +1,30 @@
+{
+  "name": "alps-doc",
+  "version": "1.0.0",
+  "description": "Read in ALPS profile, generate basic reference documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mamund/alps-doc.git"
+  },
+  "keywords": [
+    "alps",
+    "api",
+    "docs",
+    "http",
+    "rest",
+    "mamund"
+  ],
+  "author": "Mike Amundsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mamund/alps-doc/issues"
+  },
+  "homepage": "https://github.com/mamund/alps-doc#readme",
+  "dependencies": {
+    "commander": "^2.15.1"
+  }
+}
