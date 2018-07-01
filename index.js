@@ -150,7 +150,7 @@ function parseActions(docs) {
     node.push({p:"The following actions, or state transitions, are defined for this API."});
     for(i=0,x=actions.length;i<x;i++) {
       text = "**" + actions[i].id + "**";
-      a.push(text);
+      //a.push(text);
       rows.push([text, actions[i].type]);
     }
     node.push({ul:a});
