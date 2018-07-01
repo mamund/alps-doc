@@ -73,7 +73,7 @@ function readALPS(docs) {
 
 function addConverters(json2md) {
   json2md.converters.link = function (link,json2md) {
-    return "[" + link.title + "](" + link.href +")";
+    return "[" + link.title + "](" + link.href +")\n";
   }
 }
 
