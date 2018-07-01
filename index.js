@@ -73,7 +73,7 @@ function readALPS(docs) {
 
 function addConverters(json2md) {
   json2md.converters.link = function (link,json2md) {
-    return "[" + link.title + "](" + link.href +")\n";
+    return "[" + link.title + "](" + link.href + ")";
   }
 }
 
@@ -152,7 +152,7 @@ function parseActions(docs) {
       a.push(actions[i].type||"safe");
       a.push(actions[i].rt||"na");
       a.push(parseArgs(actions[i].descriptors||[]));
-      a.push(actions[i].note||{link:{"title":"link","href":"http://amundsen.com/"}});
+      a.push(actions[i].note||{link:{title:"link",href:"http://amundsen.com/"}});
       //a.push(actions[i].note||".");
       rows.push(a);
     }
