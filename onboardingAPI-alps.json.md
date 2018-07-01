@@ -22,8 +22,14 @@ The following actions, or state transitions, are defined for this API.
 
 id | type
 --- | ---
-col1 | col2
-startOnboarding | safe
+**startOnboarding** | safe
+**collectCustomerData** | safe
+**saveToWIP** | unsafe
+**collectAccountData** | safe
+**saveToWIP** | unsafe
+**completeOnboarding** | unsafe
+**goHome** | safe
+**abandonOnboarding** | unsafe
 
 ## States
 

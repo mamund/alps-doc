@@ -148,12 +148,12 @@ function parseActions(docs) {
   if(actions.length!==0) {
     node.push({h2:"Actions"});
     node.push({p:"The following actions, or state transitions, are defined for this API."});
-    //for(i=0,x=actions.length;i<x;i++) {
-    rows.push(["col1","col2"]);
-    for(i=0,x=1;i<x;i++) {
-      //text = "**" + actions[i].id + "**";
+    for(i=0,x=actions.length;i<x;i++) {
+      //rows.push(["col1","col2"]);
+      //for(i=0,x=1;i<x;i++) {
+      text = "**" + actions[i].id + "**";
       a = [];
-      a.push(actions[i].id);
+      a.push(text);
       a.push(actions[i].type);
       rows.push(a);
     }
