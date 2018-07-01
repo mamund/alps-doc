@@ -20,26 +20,17 @@ The following data properties are defined for this API.
 
 The following actions, or state transitions, are defined for this API.
 
-
- - **startOnboarding**
- - **collectCustomerData**
- - **saveToWIP**
- - **collectAccountData**
- - **saveToWIP**
- - **completeOnboarding**
- - **goHome**
- - **abandonOnboarding**
-
 id | type
 --- | ---
-**startOnboarding**|safe 
-**collectCustomerData**|safe
-**saveToWIP**|unsafe 
-**collectAccountData**|safe 
-**saveToWIP**|unsafe 
-**completeOnboarding**|unsafe 
-**goHome**|safe 
-**abandonOnboarding**|unsafe
+**startOnboarding**
+safe | **collectCustomerData**
+safe | **saveToWIP**
+unsafe | **collectAccountData**
+safe | **saveToWIP**
+unsafe | **completeOnboarding**
+unsafe | **goHome**
+safe | **abandonOnboarding**
+unsafe
 
 ## States
 
