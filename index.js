@@ -122,17 +122,7 @@ function parseProperties(docs) {
   return true;
 }
 
-/* emit action table
-  { 
-    table : {
-      headers: [],
-      rows : [
-        {}
-      ]
-    }
-  }
- 
-*/
+// emit action table
 function parseActions(docs) {
   var actions = [];
   var a = [];
@@ -147,7 +137,7 @@ function parseActions(docs) {
     node.push({h2:"Actions"});
     node.push({p:"The following actions, or state transitions, are defined for this API."});
     for(i=0,x=actions.length;i<x;i++) {
-      text = "**" + actions[i].id||"missing" + "**";
+      text = "**" + (actions[i].id||"missing") + "**";
       a = [];
       a.push(text);
       a.push(actions[i].type||"safe");

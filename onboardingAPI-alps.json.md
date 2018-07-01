@@ -22,14 +22,14 @@ The following actions, or state transitions, are defined for this API.
 
 id | type | rt | args | notes
 --- | --- | --- | --- | ---
-**startOnboarding | safe | na | na | 
-**collectCustomerData | safe | na | na | 
-**saveToWIP | unsafe | na | na | 
-**collectAccountData | safe | na | na | 
-**saveToWIP | unsafe | na | na | 
-**completeOnboarding | unsafe | na | na | 
-**goHome | safe | na | na | 
-**abandonOnboarding | unsafe | na | na | 
+**startOnboarding** | safe | na | na | 
+**collectCustomerData** | safe | na | na | 
+**saveToWIP** | unsafe | na | na | 
+**collectAccountData** | safe | na | na | 
+**saveToWIP** | unsafe | na | na | 
+**completeOnboarding** | unsafe | na | na | 
+**goHome** | safe | na | na | 
+**abandonOnboarding** | unsafe | na | na | 
 
 ## States
 
