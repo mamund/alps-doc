@@ -147,10 +147,13 @@ function parseActions(docs) {
     node.push({h2:"Actions"});
     node.push({p:"The following actions, or state transitions, are defined for this API."});
     for(i=0,x=actions.length;i<x;i++) {
-      text = "**" + actions[i].id + "**";
+      text = "**" + actions[i].id||"missing" + "**";
       a = [];
       a.push(text);
-      a.push(actions[i].type);
+      a.push(actions[i].type||"safe");
+      a.push(actions[i].rt||"na");
+      a.push(actions[i].args||"na");
+      a.push(actions[i].note||"");
       rows.push(a);
     }
     node.push({ table : { headers : headers, rows: rows } });
