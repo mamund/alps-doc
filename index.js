@@ -31,6 +31,7 @@ function alps2doc(file) {
   docs.infile = file;
   if(readALPS(docs)===true) {
     console.log("parsing ALPS into Markdown...");
+    addConverters(json2md);
     parseTitle(docs);
     parseOpening(docs);
     parseProperties(docs);
@@ -68,6 +69,12 @@ function readALPS(docs) {
   }  
 
   return rtn;
+}
+
+function addConverters(json2md) {
+  json2md.converters.link = function (link,json2md) {
+    return "[" + link.title + "](" + link.href +")";
+  }
 }
 
 function parseTitle(docs) {
@@ -145,7 +152,7 @@ function parseActions(docs) {
       a.push(actions[i].type||"safe");
       a.push(actions[i].rt||"na");
       a.push(parseArgs(actions[i].descriptors||[]));
-      a.push(actions[i].note||"");
+      a.push(actions[i].note||{link : {"title" : "link", "href" : "http://amundsen.com/#"+actions[i].id}});
       rows.push(a);
     }
 
