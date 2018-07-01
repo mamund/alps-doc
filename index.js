@@ -43,7 +43,7 @@ function alps2doc(file) {
 // write out the markdown
 function writeMD(docs) {
   docs.outfile = docs.infile + ".md";
-  console.log(JSON.stringify(docs.doc,null,2));
+  //console.log(JSON.stringify(docs.doc,null,2));
   fs.writeFile(docs.outfile,json2md(docs.doc), function(err) {
     if(err) {
       console.log(err);
@@ -137,6 +137,7 @@ function parseActions(docs) {
   if(actions.length!==0) {
     node.push({h2:"Actions"});
     node.push({p:"The following actions, or state transitions, are defined for this API."});
+
     for(i=0,x=actions.length;i<x;i++) {
       text = "**" + (actions[i].id||"missing") + "**";
       a = [];
@@ -147,9 +148,13 @@ function parseActions(docs) {
       a.push(actions[i].note||"");
       rows.push(a);
     }
+
     node.push({ table : { headers : headers, rows: rows } });
+
  }
+
   return true;
+
 }
 
 function parseStates(docs) {
@@ -162,11 +167,13 @@ function parseStates(docs) {
 }
 
 function parseArgs(descriptors) {
-  var args = [];
   var i,x;
+  var args = [];
 
   for(i=0,x=descriptors.length;i<x;i++) {
     args.push(descriptors[i].href);
   }
+
   return args.join(",");
+
 }
