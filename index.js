@@ -13,6 +13,7 @@
  */
 
 "use strict";
+
 var json2md = require('json2md');
 var program = require('commander');
 var JSONPath = require('jsonpath-plus');
@@ -142,7 +143,7 @@ function parseActions(docs) {
       a.push(text);
       a.push(actions[i].type||"safe");
       a.push(actions[i].rt||"na");
-      a.push(actions[i].args||"na");
+      a.push(JSON.stringify(actions[i].descriptors,null,2)||"na");
       a.push(actions[i].note||"");
       rows.push(a);
     }
