@@ -166,7 +166,7 @@ function parseArgs(descriptors) {
   var i,x;
 
   for(i=0,x=descriptors.length;i<x;i++) {
-    args.push({p:descriptors[i].href});
+    args.push(descriptors[i].href);
   }
-  return args;
+  return args.join(",");
 }
