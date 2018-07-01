@@ -143,7 +143,7 @@ function parseActions(docs) {
       a.push(text);
       a.push(actions[i].type||"safe");
       a.push(actions[i].rt||"na");
-      a.push("'"+JSON.stringify(actions[i].descriptors,null,2)+"'"||"na");
+      a.push(parseArgs(actions[i].descriptors||[]));
       a.push(actions[i].note||"");
       rows.push(a);
     }
@@ -159,4 +159,14 @@ function parseStates(docs) {
 
   return true;
 
+}
+
+function parseArgs(descriptors) {
+  var args = [];
+  var i,x;
+
+  for(i=0,x=descriptors.length;i<x;i++) {
+    args.push({p:descriptors[i].href});
+  }
+  return args;
 }
