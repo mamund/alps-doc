@@ -20,17 +20,9 @@ The following data properties are defined for this API.
 
 The following actions, or state transitions, are defined for this API.
 
-id | type
+a | b
 --- | ---
-**startOnboarding**
-safe | **collectCustomerData**
-safe | **saveToWIP**
-unsafe | **collectAccountData**
-safe | **saveToWIP**
-unsafe | **completeOnboarding**
-unsafe | **goHome**
-safe | **abandonOnboarding**
-unsafe
+col1 | col2
 
 ## States
 
