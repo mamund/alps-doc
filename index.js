@@ -42,6 +42,7 @@ function alps2doc(file) {
 // write out the markdown
 function writeMD(docs) {
   docs.outfile = docs.infile + ".md";
+  console.log(JSON.stringify(docs.doc,null,2));
   fs.writeFile(docs.outfile,json2md(docs.doc), function(err) {
     if(err) {
       console.log(err);
@@ -138,7 +139,7 @@ function parseActions(docs) {
   var node = docs.doc;
   var i,x,text;
   var line;
-  var headers = ["id","type","rt","args","notes"];
+  var headers = ["id","type"];
   var rows = [];
   var table = {}
 
