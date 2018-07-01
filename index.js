@@ -44,7 +44,7 @@ function alps2doc(file) {
 // write out the markdown
 function writeMD(docs) {
   docs.outfile = docs.infile + ".md";
-  //console.log(JSON.stringify(docs.doc,null,2));
+  console.log(JSON.stringify(docs.doc,null,2));
   fs.writeFile(docs.outfile,json2md(docs.doc), function(err) {
     if(err) {
       console.log(err);
@@ -152,8 +152,8 @@ function parseActions(docs) {
       a.push(actions[i].type||"safe");
       a.push(actions[i].rt||"na");
       a.push(parseArgs(actions[i].descriptors||[]));
-      //a.push(actions[i].note||{link : {"title" : "link", "href" : "http://amundsen.com/#"+actions[i].id}});
-      a.push(actions[i].note||".");
+      a.push(actions[i].note||{link : {"title" : "link", "href" : "http://amundsen.com/#"+actions[i].id}});
+      //a.push(actions[i].note||".");
       rows.push(a);
     }
 
