@@ -22,23 +22,12 @@ The following actions, or state transitions, are defined for this API.
 
 id | type | rt | args | notes
 --- | --- | --- | --- | ---
-**startOnboarding** | safe | na | [
+**startOnboarding** | safe | na | '[
   {
     "href": "#identifier"
   }
-] | 
-**collectCustomerData** | safe | na | [
-  {
-    "href": "#identifier"
-  },
-  {
-    "href": "#name"
-  },
-  {
-    "href": "#email"
-  }
-] | 
-**saveToWIP** | unsafe | na | [
+]' | 
+**collectCustomerData** | safe | na | '[
   {
     "href": "#identifier"
   },
@@ -48,8 +37,19 @@ id | type | rt | args | notes
   {
     "href": "#email"
   }
-] | 
-**collectAccountData** | safe | na | [
+]' | 
+**saveToWIP** | unsafe | na | '[
+  {
+    "href": "#identifier"
+  },
+  {
+    "href": "#name"
+  },
+  {
+    "href": "#email"
+  }
+]' | 
+**collectAccountData** | safe | na | '[
   {
     "href": "#identifier"
   },
@@ -59,8 +59,8 @@ id | type | rt | args | notes
   {
     "href": "#discount"
   }
-] | 
-**saveToWIP** | unsafe | na | [
+]' | 
+**saveToWIP** | unsafe | na | '[
   {
     "href": "#identifier"
   },
@@ -70,18 +70,18 @@ id | type | rt | args | notes
   {
     "href": "#discount"
   }
-] | 
-**completeOnboarding** | unsafe | na | [
+]' | 
+**completeOnboarding** | unsafe | na | '[
   {
     "href": "#identifier"
   }
-] | 
-**goHome** | safe | na | na | 
-**abandonOnboarding** | unsafe | na | [
+]' | 
+**goHome** | safe | na | 'undefined' | 
+**abandonOnboarding** | unsafe | na | '[
   {
     "href": "#identifier"
   }
-] | 
+]' | 
 
 ## States
 
