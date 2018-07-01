@@ -22,8 +22,8 @@ The following actions, or state transitions, are defined for this API.
 
 id | type
 --- | ---
-startOnboarding
-safe
+col1 | col2
+startOnboarding | safe
 
 ## States
 

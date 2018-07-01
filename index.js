@@ -149,6 +149,7 @@ function parseActions(docs) {
     node.push({h2:"Actions"});
     node.push({p:"The following actions, or state transitions, are defined for this API."});
     //for(i=0,x=actions.length;i<x;i++) {
+    rows.push(["col1","col2"]);
     for(i=0,x=1;i<x;i++) {
       //text = "**" + actions[i].id + "**";
       a = [];
@@ -156,10 +157,9 @@ function parseActions(docs) {
       a.push(actions[i].type);
       rows.push(a);
     }
-  }
-  node.push({ table : { headers : headers, rows: [rows] } });
-  //node.push({ table: { headers: ["a", "b"], rows: [["col1", "col2"]] } });
-
+    node.push({ table : { headers : headers, rows: rows } });
+    //node.push({ table: { headers: ["a", "b"], rows: [["col1", "col2"]] } });
+ }
   return true;
 }
 
