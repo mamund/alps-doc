@@ -153,7 +153,6 @@ function parseActions(docs) {
       a.push(actions[i].rt||"na");
       a.push(parseArgs(actions[i].descriptors||[]));
       a.push(actions[i].note||{link:{title:"link",href:"http://amundsen.com/"}});
-      //a.push(actions[i].note||".");
       rows.push(a);
     }
 
