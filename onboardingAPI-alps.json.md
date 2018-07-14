@@ -13,6 +13,7 @@ The following data properties are defined for this API.
 ## Actions
 
 The following actions, or state transitions, are defined for this API.
+
 id | type | rt | args | notes
 --- | --- | --- | --- | ---
 **startOnboarding** | safe | na | #identifier | [link](http://amundsen.com/)
