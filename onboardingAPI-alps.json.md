@@ -28,14 +28,14 @@ The following actions, or state transitions, are defined for this API.
 
 id | type | rt | args | notes
 --- | --- | --- | --- | ---
-**startOnboarding** | safe | na | #identifier | [link](http://amundsen.com/)
-**collectCustomerData** | safe | na | #identifier,#name,#email | [link](http://amundsen.com/)
-**saveToWIP** | unsafe | na | #identifier,#name,#email | [link](http://amundsen.com/)
-**collectAccountData** | safe | na | #identifier,#region,#discount | [link](http://amundsen.com/)
-**saveToWIP** | unsafe | na | #identifier,#region,#discount | [link](http://amundsen.com/)
-**completeOnboarding** | unsafe | na | #identifier | [link](http://amundsen.com/)
+**startOnboarding** | safe | na | <a href='#identifier'>#identifier</a> | [link](http://amundsen.com/)
+**collectCustomerData** | safe | na | <a href='#identifier'>#identifier</a>,<a href='#name'>#name</a>,<a href='#email'>#email</a> | [link](http://amundsen.com/)
+**saveToWIP** | unsafe | na | <a href='#identifier'>#identifier</a>,<a href='#name'>#name</a>,<a href='#email'>#email</a> | [link](http://amundsen.com/)
+**collectAccountData** | safe | na | <a href='#identifier'>#identifier</a>,<a href='#region'>#region</a>,<a href='#discount'>#discount</a> | [link](http://amundsen.com/)
+**saveToWIP** | unsafe | na | <a href='#identifier'>#identifier</a>,<a href='#region'>#region</a>,<a href='#discount'>#discount</a> | [link](http://amundsen.com/)
+**completeOnboarding** | unsafe | na | <a href='#identifier'>#identifier</a> | [link](http://amundsen.com/)
 **goHome** | safe | na |  | [link](http://amundsen.com/)
-**abandonOnboarding** | unsafe | na | #identifier | [link](http://amundsen.com/)
+**abandonOnboarding** | unsafe | na | <a href='#identifier'>#identifier</a> | [link](http://amundsen.com/)
 ## States
 
 The following states (e.g. REST Resources) are defined for this API.

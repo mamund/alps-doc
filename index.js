@@ -124,7 +124,6 @@ function parseProperties(docs) {
         node.push({p:"_" + props[i].text + "_"});
       }
     }
-    //node.push({ul:p});
   }
   return true;
 }
@@ -177,7 +176,7 @@ function parseArgs(descriptors) {
   var args = [];
 
   for(i=0,x=descriptors.length;i<x;i++) {
-    args.push(descriptors[i].href);
+    args.push("<a href='"+descriptors[i].href+"'>"+descriptors[i].href+"</a>");
   }
 
   return args.join(",");
