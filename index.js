@@ -119,15 +119,10 @@ function parseProperties(docs) {
     node.push({h2:"Properties"});
     node.push({p:"The following data properties are defined for this API.\n"});
     for(i=0,x=props.length;i<x;i++) {
-      node.push({h6:props[i].id});
+      node.push({h4:props[i].id});
       if(props[i].text && props[i].text !== "") {
         node.push({p:props[i].text});
       }
-      //text = "**" + props[i].id + "**";
-      //if(props[i].text && props[i].text !== "") {
-      //  text = text + " : " + props[i].text;
-      //}
-      //p.push(text);
     }
     node.push({ul:p});
   }
