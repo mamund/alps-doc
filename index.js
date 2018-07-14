@@ -121,10 +121,10 @@ function parseProperties(docs) {
     for(i=0,x=props.length;i<x;i++) {
       node.push({h4:props[i].id});
       if(props[i].text && props[i].text !== "") {
-        node.push({p:props[i].text});
+        node.push({p:"_" + props[i].text + "_"});
       }
     }
-    node.push({ul:p});
+    //node.push({ul:p});
   }
   return true;
 }

@@ -8,20 +8,19 @@ The following data properties are defined for this API.
 
 #### identifier
 
-Unique onboarding record identifier.
+_Unique onboarding record identifier._
 #### name
 
-Name of the customer being onboarded.
+_Name of the customer being onboarded._
 #### email
 
-Email address of the customer being onboarded.
+_Email address of the customer being onboarded._
 #### region
 
-Sales region where the customer is located.
+_Sales region where the customer is located._
 #### discount
 
-Discount (as a percentage) this customer is granted.
-
+_Discount (as a percentage) this customer is granted._
 ## Actions
 
 The following actions, or state transitions, are defined for this API.
