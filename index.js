@@ -143,7 +143,7 @@ function parseActions(docs) {
 
   if(actions.length!==0) {
     node.push({h2:"Actions"});
-    node.push({p:"The following actions, or state transitions, are defined for this API."});
+    node.push({p:"The following actions, or state transitions, are defined for this API.\n"});
 
     for(i=0,x=actions.length;i<x;i++) {
       text = "**" + (actions[i].id||"missing") + "**";
