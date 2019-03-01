@@ -1,7 +1,7 @@
-# On-Boarding API
+# Weather API
 
 
-ALPS Profile for BigCo's Customer On-Boarding API
+ALPS Profile for BigCo's Weather API
 
 ## Properties
 
@@ -10,30 +10,30 @@ The following data properties are defined for this API.
 
 
 
-#### identifier
+#### id
 
 
-_Unique onboarding record identifier._
+_Weather condition id._
+
+#### icon
+
+
+_Weather icon id._
+
+#### dt
+
+
+_Date/Time of condition calculation._
 
 #### name
 
 
-_Name of the customer being onboarded._
+_City name._
 
-#### email
-
-
-_Email address of the customer being onboarded._
-
-#### region
+#### clouds
 
 
-_Sales region where the customer is located._
-
-#### discount
-
-
-_Discount (as a percentage) this customer is granted._
+_Cloudiness in percentage._
 
 ## Actions
 
