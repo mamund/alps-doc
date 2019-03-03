@@ -1,21 +1,21 @@
 {
   "alps": {
     "version": "1.0",
-    "title": "On-Boarding API",
+    "title": "Weather API",
     "doc": {
       "type": "text",
-      "value": "ALPS Profile for BigCo's Customer On-Boarding API"
+      "value": "ALPS Profile for BigCo's Weather API"
     },
     "descriptors": [
       {
-        "id": "identifier",
+        "id": "id",
         "type": "semantic",
-        "text" : "Unique onboarding record identifier."
+        "text" : "Weather condition id."
       },
       {
-        "id": "name",
+        "id": "icon",
         "type": "semantic",
-        "text" : "Name of the customer being onboarded."
+        "text" : "weather icon id"
       },
       {
         "id": "email",
