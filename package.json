@@ -1,5 +1,5 @@
 {
-  "name": "alps-doc",
+  "name": "@mamund/alps-doc",
   "version": "1.0.0",
   "description": "Read in ALPS profile, generate basic reference documentation",
   "main": "index.js",
