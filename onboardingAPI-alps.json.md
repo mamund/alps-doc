@@ -18,22 +18,22 @@ _Weather condition id._
 #### icon
 
 
-_Weather icon id._
+_weather icon id_
 
-#### dt
-
-
-_Date/Time of condition calculation._
-
-#### name
+#### email
 
 
-_City name._
+_Email address of the customer being onboarded._
 
-#### clouds
+#### region
 
 
-_Cloudiness in percentage._
+_Sales region where the customer is located._
+
+#### discount
+
+
+_Discount (as a percentage) this customer is granted._
 
 ## Actions
 
@@ -44,13 +44,14 @@ The following actions, or state transitions, are defined for this API.
 
 id | type | rt | args | notes
 --- | --- | --- | --- | ---
-**byCityName** | safe | na | <a href='#name'>#name</a> | 
-**byCityID** | safe | na | <a href='#'>#cid</a> | 
-**ByGeo** | safe | na | <a href='#identifier'>#lat</a>,<a href='#name'>#long</a> | 
-**byCityZIP** | safe | na | <a href='#identifier'>#zipCode</a>| 
-**goHome** | safe| na | na | 
-**UpdateConditions** | unsafe | na | <a href='#identifier'>#condition-object</a> | 
-**RemoveConditions** | unsafe | na | <a href='#identifier'>#id</a> | 
+**startOnboarding** | safe | na | <a href='#identifier'>#identifier</a> | 
+**collectCustomerData** | safe | na | <a href='#identifier'>#identifier</a>,<a href='#name'>#name</a>,<a href='#email'>#email</a> | 
+**saveToWIP** | unsafe | na | <a href='#identifier'>#identifier</a>,<a href='#name'>#name</a>,<a href='#email'>#email</a> | 
+**collectAccountData** | safe | na | <a href='#identifier'>#identifier</a>,<a href='#region'>#region</a>,<a href='#discount'>#discount</a> | 
+**saveToWIP** | unsafe | na | <a href='#identifier'>#identifier</a>,<a href='#region'>#region</a>,<a href='#discount'>#discount</a> | 
+**completeOnboarding** | unsafe | na | <a href='#identifier'>#identifier</a> | 
+**goHome** | safe | na |  | 
+**abandonOnboarding** | unsafe | na | <a href='#identifier'>#identifier</a> | 
 
 ## States
 
