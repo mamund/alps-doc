@@ -13,28 +13,33 @@
         "text" : "Weather condition id."
       },
       {
-        "id": "icon",
+        "id": "name",
         "type": "semantic",
-        "text" : "weather icon id"
+        "text" : "name of location"
       },
       {
-        "id": "email",
+        "id": "lat",
         "type": "semantic",
-        "text" : "Email address of the customer being onboarded."
+        "text" : "latitude of location"
       },
       {
-        "id": "region",
+        "id": "lon",
         "type": "semantic",
-        "text" : "Sales region where the customer is located."
+        "text" : "latitude of location"
       },
       {
-        "id": "discount",
+        "id": "zipcode",
         "type": "semantic",
-        "text" : "Discount (as a percentage) this customer is granted."
+        "text" : "US mail ZIP Code"
       },
       {
-        "id": "home",
-        "type": "group"
+        "id": "weatherData",
+        "type": "group",
+        "descriptors" : [
+          {
+            "href": "#identifier"
+          },
+        ]
       },
       {
         "id": "WIP",
