@@ -30,6 +30,6 @@
   "dependencies": {
     "commander": "^2.15.1",
     "json2md": "^1.6.1",
-    "jsonpath-plus": "^10.0.0"
+    "jsonpath-plus": "^10.0.7"
   }
 }
